@@ -1,0 +1,25 @@
+package uniflow2;
+import java.util.Scanner;
+public class no_of_rectangle {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int i;
+int[] a=new int[n];
+for (i=0;i<n;i++) 
+	a[i]=sc.nextInt();
+	int[] h=new int[11];
+		for (i=0;i<n;i++) 
+		h[a[i]]++;	
+		int side=0;
+		for (i=0;i<n;i++) {
+			side+=h[i]/2;
+		}
+		System.out.println("no of rectangle="+(side/2));	
+		
+	sc.close();
+}
+
+	}
+
+
