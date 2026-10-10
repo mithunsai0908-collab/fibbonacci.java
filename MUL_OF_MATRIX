@@ -1,0 +1,48 @@
+package uniflow2;
+import java.util.Scanner;
+public class mul_of_matrics {
+
+	public static void main(String[] args) {
+		 
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int m=sc.nextInt();
+		int p=sc.nextInt();
+		int q=sc.nextInt();
+		int i,j,k;
+		if (m!=p) {
+			System.out.println("matric multiplication is not possible");
+		}
+		else {
+int[][] a=new int[n][m];
+for (i=0;i<n;i++) {
+	for (j=0;j<m;j++) {
+		a[i][j]=sc.nextInt();
+	}
+}
+int[][] b=new int[n][m];
+for (i=0;i<n;i++) {
+	for (j=0;j<m;j++) {
+		b[i][j]=sc.nextInt();
+	}
+}
+int[][] c=new int[n][q];
+for (i=0;i<n;i++) {
+	for (j=0;j<q;j++) {
+		for(k=0;k<m;k++) {
+
+		c[i][j]+=a[i][k]*b[k][j];
+		
+		}
+	}
+}
+for (i=0;i<n;i++) {
+	for (j=0;j<q;j++) {
+		System.out.print(c[i][j]+" ");
+	}
+	System.out.println();
+	}
+
+}
+}
+}
